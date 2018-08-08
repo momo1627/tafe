@@ -1,0 +1,90 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>	INSERT THE PAGE TITLE HERE     </title>
+  <meta name="author" content="      ADD YOUR NAME AND YOUR EMAIL ADDRESS HERE     ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style type="text/css">
+  	#pro2{
+  		width: 80px;
+  		height:20px;
+  		background-color: orange;
+  		color: white
+  	}
+  </style>
+</head>
+
+<body>
+<p id="message">Wheel</p>
+<a href="#" onclick="" title="1"><img src="http://via.placeholder.com/350x150"></a>
+<a href="#" onclick="" title="2"><img src="http://via.placeholder.com/350x150" title="3"></a>
+<a href="#" onclick="changeBoth()"></a>
+<img id='offImage' src="http://via.placeholder.com/350x150">
+<h1>Function Example</h1>
+<p>Prepare to be greeted twice !var a variable as local !if not use var the variable will be global one </p>
+<button onclick="getBill()">get bill</button>
+<button onclick="problem1()">problem1</button>
+<button onclick="problem2()">problem2</button>
+<button onclick="problem5()">problem5</button>
+<button onclick="problem6()">problem6</button>
+
+
+<ol><li id="pro2" onmousemove="problem2()" onmouseout="reset2()">problem2</li></ol>
+
+<script type="text/javascript">
+function problem1(){
+	var num1 = "Grace Murray Hopper"
+alert(num1.length)
+alert(num1.toLowerCase())
+alert(num1.toUpperCase())
+alert(num1.charAt(4))
+alert(num1.indexOf("Murray"))
+alert(num1.substring(3,7))
+alert(num1.lastIndexOf('fred'))
+alert(num1.replace('Grace','jeff'))
+}
+function problem2(){
+	var link = document.getElementById('pro2');
+	alert('poor color change')
+	link.style.backgroundColor = "red";
+}
+function reset2(){
+	var link = document.getElementById('pro2');
+	link.style.backgroundColor = "orange";
+}
+function problem5(){
+	var result ="";
+	var enter = prompt("enter a string:");
+	for (var i=enter.length-1; i>=0 ;--i){
+		result += enter[i]
+	}
+	alert(result)
+}
+function isPalindrome(str){
+	if (str = "") return false
+	var rts = "";
+	for (var i=str.length-1; i>=0 ;--i){
+		rts += str[i]
+	}
+	for (var i=0;i<str.length;i++){
+		if (str[i] !== rts[i]) {
+			return false
+		} else {return true}
+	}
+}
+function problem6(){
+	var enter = prompt("enter a str for palinrom text");
+	if (isPalindrome(enter)) {
+		alert(enter + " is palinrom");
+	} else {
+		alert(enter + " is not palinrom")
+	}
+}
+</script>
+</body>
+</html> 
