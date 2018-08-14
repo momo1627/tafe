@@ -1,0 +1,83 @@
+﻿* {
+margin: 0em;
+padding: 0em;
+font-size: 100%;
+border-style: none;
+list-style-type: none;
+}
+body{
+	font-family: "trebuchet MS",calibri,sans-serif;
+	background-color: #f0f0f0;
+}
+#wrapper{
+	width: 700px;
+	margin: 0 auto;
+	padding: 0 50px;
+	background-color: #ffffff;
+	border: 1px solid #79575c;
+}
+#inner-wrapper{
+	width: 604px;
+	margin:0 auto;
+}
+nav{
+	margin-top: 14px;
+	font-size: 105%;
+}
+nav ul{
+	display: flex;
+	justify-content: space-between;
+}
+nav a{
+	color: #79575c;
+	text-decoration: none;
+}
+nav a:hover,#current-page{
+	color: #8e2942
+}
+
+main{
+	width: 500px;
+	margin: 30px auto 0px;
+}
+main h1{
+	margin-top: 25px;
+	color: #4f393c;
+	font-size: 20px;
+}
+main p{
+	font-size: 14px;
+	margin-top: 10px;
+}
+main a{
+	text-decoration: none;
+}
+main a:hover{
+	text-decoration: underline;
+}
+main ul{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+main ul img{
+	border-radius: 25px;
+}
+footer{
+	width: 360px;
+	margin: 18px auto 14px;
+	font-size: 10px;
+	color: #79575c;
+}
+footer ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+footer ul a{
+	color: #79575c;
+	text-decoration: none;
+}
+footer ul a:hover{
+	text-decoration: underline;
+}
