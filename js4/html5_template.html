@@ -1,0 +1,135 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>	INSERT THE PAGE TITLE HERE     </title>
+  <meta name="author" content="      ADD YOUR NAME AND YOUR EMAIL ADDRESS HERE     ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+  	#boxes {
+  		display: flex;
+  		justify-content: space-around;
+  	}
+  	#boxes div{
+  		height: 100px;
+  		width: 100px;
+  		border: 1px solid #000000;
+  	}
+  	#raw{
+  		height: 22px;
+  		border:1px solid #000000;
+  	}
+  </style>
+</head>
+
+<body>
+<div id="wrapper">
+<header id="boxes">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<button id="color">color!</button>
+	<button id="clear">clear!</button>
+
+</header>
+
+<nav>
+
+</nav>
+<main>
+	<div id="raw">current time and date</div>
+<form>
+	<input type="button" value="Random Number" name="" onclick="alert(randomise())">
+	<input type="button" value="Get a Quote" name="" onclick="getaQuate()">
+	<input type="button" value="What is your birthday?" onclick="findDay()" name="">
+	<input type="button" value="current month?" onclick="findMonth()" name="">
+	<input type="button" value="how many days left?" onclick="daysLeft()" name="">
+	<input type="button" value="current date and time?" onclick="simple()" name="">
+
+</form>
+</main>
+<footer>
+
+</footer>
+</div>
+<script type="text/javascript" src="color.js"></script>
+<script type="text/javascript">
+	var chevCar = new Array("Noav","Impala","Corvette");
+	var fordCar = new Array("Escort","Pinto","Taurus");
+	var combCar = chevCar.concat(fordCar);
+	document.write("The variable combCar contains " + combCar+"<br>")
+//2	
+	var chevCar2 = chevCar.join(';');
+	document.write(chevCar2+"<br>");
+//3
+	var fordCar2 = fordCar.pop();
+	document.write(fordCar2+"<br>"+fordCar+"<br>");
+	fordCar.push("Taurus");
+//4 
+	var volksCar = new Array('Beetle','Jetta',"Passat");
+	var combCar2 = chevCar.concat(fordCar,volksCar);
+	document.write(combCar2+"<br>");
+	combCar2.pop();
+	document.write(combCar2+"<br>");
+//5
+	document.write(chevCar+"<br>");
+	var rmCar = chevCar.pop();
+	document.write(rmCar+"<br>");
+//6 
+	chevCar.reverse();
+	document.write(chevCar+"<br>");
+//7
+	chevCar.reverse().push("Corvette","Camaro",'Nomad','Cobalt');
+	document.write(chevCar+"<br>");
+	chevCar.sort();
+	document.write(chevCar+"<br>");
+	var myarray = [25,8,7,41];
+	myarray.sort();
+	document.write(myarray+"<br>");
+	function compare(a,b){
+		return a - b;
+	}
+	myarray.sort(compare);
+	document.write(myarray+"<br>");
+//8
+	var i;
+	var roses = new Array('Floribunda','English Rose',"Dog Rose");
+	for (i in roses) document.write(roses[i]+"<br>")
+//9
+	var animals = ['dog','cat','bird','tiger','lion'];
+	animals = animals.concat(['eagle','turtel']);
+	animals.sort();
+	document.write(animals+"<br>")
+//10 
+	var colors = new Array;
+	colors['red'] = 'ff0000';
+colors['white'] = 'ffffff'
+colors['black'] = '000000'
+colors['blue'] = '0000ff'
+	var x;
+	for (x in colors) document.write(x+":"+colors[x]+"<br>")
+
+//1
+function randomise(){
+		var ran_number = Math.floor(Math.random()*5);
+		return ran_number;
+	}
+	function getaQuate(){
+		var whichQuote=randomise();
+		var quote = new Array(5);
+		quote[0] = "I lvoe javascript!";
+		quote[1] = "Why are you pushing my button?";
+		quote[2] = "The button you pushed can\'t push you back.";
+		quote[3] = "Don\'t put of  until tommorrow.";
+		quote[4] = "Which came first, the chiken or the egg?"
+		alert(quote[whichQuote])
+ 	}
+	
+</script>
+<script type="text/javascript" src="data.js"></script>
+</body>
+</html> 
