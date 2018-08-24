@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<title>Image timers using arrays</title>
+
+<script type="text/javascript">
+
+var timer;
+var count = 0;
+// Create image name array
+var imageArr = ['img_BMW','img_Merc','img_Chr','img_Mas'];
+// Step 1: create array 1 here
+// Create image description array           
+var imageDescArr = ['BMW','Mercedes','Chrysler','Maserati']; // Step 2: create array 2 here
+
+// This function will loop every three seconds (setTimeout is called at the end and set to execute in 3000 milliseconds)
+// Assign a timer to the variable so we can stop the loop when we want
+function startRotate()
+{
+	// Get the image name from the array
+	document.getElementById("pic").src = "images/" + imageArr[count] + ".jpg"; // image
+	document.getElementById("desc").innerHTML = (count+1) + " " + imageDescArr[count]; // description 
+
+	count++;
+	if(count == imageArr.length)
+		count = 0;
+
+	// Step 3 - use the setTimeout function to call the function startRotate after 3 seconds
+	// Use a variable "timer" so that the rotation can be stopped
+	timer = setTimeout("startRotate()",3000)
+}
+
+// This will stop the timer
+function stopRotate()
+{
+	clearTimeout(timer);
+}
+
+</script>
+
+<style type="text/css">
+
+html body 
+{
+	text-align: center;
+	margin: 20px 0;
+}
+
+#box
+{
+	margin: 0 auto;
+	width: 480px;
+	text-align: center;
+	background-color: #cccccc;
+	padding: 30px 20px 20px 20px;
+}
+
+img
+{
+	margin: 0 0 10px 0;
+	border: none;
+}
+
+p
+{
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #666666;
+}
+
+a
+{
+	padding: 0 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="box">
+
+<!-- Image -->
+<img src="images/img_BMW.jpg" id="pic" alt="Vehicle slideshow" />
+
+<!-- Description -->
+<p id="desc">1 BMW</p>
+
+<!-- Start link -->
+<a href="#" onclick="stopRotate(); startRotate(); return false;">Start</a>
+
+<!-- Stop link -->
+<a href="#" onclick="stopRotate(); return false;">Stop</a>
+
+</div>
+
+</body>
+
+</html>

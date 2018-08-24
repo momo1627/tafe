@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Robot Animation</title>
+    <link rel="stylesheet" href="plain.css">
+  
+
+  </head>
+  <body>
+    <h1>Robot Animation</h1>
+    <div id="robot"></div>
+    <input type="button" value="start" ="start" id="start" onclick = 'robot();'>
+    <input type="button" value="stop"  id="stop" onclick="clearTimeout(timer)">
+
+<script type="text/javascript">
+		var timer;
+	
+	function robot(){
+		div = document.getElementById('robot');
+		frameHeight = 150;
+		xframes = 10;
+		offsetY = 0
+		animate();
+	}
+	function animate(){
+		offsetY -= frameHeight;
+		if (offsetY <= -frameHeight * xframes){
+			offsetY = 0
+		}
+		clearTimeout(timer);
+		div.style.backgroundPosition = "0 " + offsetY + "px";
+		timer = setTimeout('animate()',75)
+	}
+</script>
+  </body>
+</html>

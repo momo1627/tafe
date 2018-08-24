@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<title>Image timers using arrays - preloading images</title>
+
+<script>
+
+var timer;
+var count = 0;
+// preloaded images array (this array is populated in function preloadImages which is called when the page is loaded)
+var imageArr2 = new Array();
+// image description array           
+var imgDescArr = new Array ("BMW", "Mercedes", "Chrysler", "Maserati"); 
+
+function preloadImages()
+{
+// image name array
+// it is best to define this array here, as it is only used by this function
+var imageArr = new Array("img_BMW", "img_Merc", "img_Chr", "img_Mas"); 
+
+	// Pre-load your images - create a new array of images and assign the appropriate source value (from the imageArr array)
+	// The count variable is again defined in this function and is only local to this function (it does not affect the value of the count variable defined above outside this function)
+	for(var count=0; count < imageArr.length; count++)
+	{
+		imageArr2[count] = new Image();
+		imageArr2[count].src = "images/" + imageArr[count] + ".jpg"
+	}
+}
+
+// This function will loop every three seconds (setTimeout is called at the end and set to execute in 3000 milliseconds)
+// Assign a timer to the variable so we can stop the loop when we want
+function startRotate()
+{
+	// Get the image name from the array imageArr2
+	document.getElementById("pic").src = imageArr2[count].src // image
+	document.getElementById("desc").innerHTML = (count+1) + " " + imgDescArr[count]; // description 
+
+	count++;
+	if(count == imageArr2.length)
+		count = 0;
+		
+	timer = setTimeout("startRotate()", 3000);
+}
+
+// This will stop the timer
+function stopRotate()
+{
+	clearTimeout(timer);
+}
+
+</script>
+
+<style type="text/css">
+html body 
+{
+	text-align: center;
+	margin: 20px 0;
+}
+
+#box
+{
+	margin: 0 auto;
+	width: 480px;
+	text-align: center;
+	background-color: #cccccc;
+	padding: 30px 20px 20px 20px;
+}
+
+img
+{
+	margin: 0 0 10px 0;
+	border: none;
+}
+
+p
+{
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #666666;
+}
+
+a
+{
+	padding: 0 10px;
+}
+
+</style>
+
+</head>
+
+<body onload="preloadImages()">
+
+<div id="box">
+
+<!-- Image -->
+<img src="images/img_BMW.jpg" id="pic" alt="Vehicle slideshow" />
+
+<!-- Description -->
+<p id="desc">1 BMW</p>
+
+<!-- Start link -->
+<!-- Step 1: Insert onclick event to call function stopRotate followed by startRotate; ensure that return false is used -->
+<a href="#" onclick="stopRotate(); startRotate(); return false">Start</a>
+
+<!-- Stop link -->
+<!-- Step 2: Insert onclick event to call function stopRotate; ensure that return false is used -->
+<a href="#" onclick="stopRotate()">Stop</a>
+
+</div>
+
+</body>
+
+</html>

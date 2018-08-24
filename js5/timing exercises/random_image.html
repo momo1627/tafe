@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<title>Random image with description</title>
+
+<script>
+
+// image name array
+var imageArr = new Array("img_BMW", "img_Merc", "img_Chr", "img_Mas"); 
+// image description array           
+var descArr = new Array ("BMW", "Mercedes", "Chrysler", "Maserati"); 
+
+function randomImageWithText()
+{
+/* 
+Math.random() is an inbuilt JS function to create a random number between 0 and 1
+Math.floor() rounds a number down to the nearest whole number
+imageArr.length in this example is 4
+Here are a few examples of some index possibilities:
+        .2 x 4 = 0.8 (Math.floor rounds down to 0)
+        .4 x 4 = 1.6 (Math.floor rounds down to 1)
+        .6 x 4 = 2.4 (Math.floor rounds down to 2)
+        .8 x 4 = 3.2 (Math.floor rounds down to 3)
+0, 1, 2 and 3 are all the possible index values for both the image name and description arrays above
+*/ 
+	var whichimage = Math.floor(Math.random()*imageArr.length);
+        // Step 1: Use document.getElementById and src to set the image source (using the whichimage variable as the index)
+        document.getElementById('pic').src = "images/" + imageArr[whichimage] +'.jpg';
+	// Step 2: Use document.getElementById and innerHTML to set the image description (using the whichimage variable as the index)
+		document.getElementById('desc').innerHTML = descArr[whichimage]
+
+}
+
+</script>
+
+<style>
+
+body 
+{
+	text-align: center;
+	margin: 20px 0;
+}
+
+#box
+{
+	margin: 0 auto;
+	width: 480px;
+	text-align: center;
+	background-color: #cccccc;
+	padding: 10px 20px 20px 20px;
+}
+
+img
+{
+	margin: 0 0 20px 0;
+	border: none;
+}
+
+h1
+{
+        color: #666666;
+}
+
+</style>
+
+</head>
+
+<body onload="randomImageWithText()">
+
+<div id="box">
+
+<h1>Wedding Cars</h1>
+<a href="#"><img src="images/img_BMW.jpg" alt="" id="pic" /></a>
+<br /><a href="#" id="desc">BMW</a>
+
+</div>
+
+</body>
+
+</html>

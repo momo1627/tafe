@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+<title>display rainbow colours</title>
+<script>
+<!-- 
+var rainbow_colours = new Array("red", "orange", "yellow", "green", "blue", "indigo", "violet");
+var index = 0;
+/////////////////////////////////////////
+// Step 1: Define a timer variable below
+var timer;
+/////////////////////////////////////////
+
+
+function displayRainbowColours()
+{  
+	// Set the page background colour     
+	window.document.bgColor = rainbow_colours[index];
+	// Set the appropriate colour name in the paragraph tag below
+	document.getElementById("colour_name").innerHTML = rainbow_colours[index];
+
+	// Increment the array index value
+	index++;
+	// If the index is equal to the array length, then set the index back to 0 (remember that arrays are zero-based)
+	if (index == rainbow_colours.length)
+		index = 0;  
+	clearTimeout(timer);
+	// This code creates a 1 second delay
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	// Step 2: Ensure that the timer variable is used on the left hand side of the statement below
+	// so that the timer can be stopped
+	///////////////////////////////////////////////////////////////////////////////////////////////
+	timer = setTimeout("displayRainbowColours()", 1000);
+}
+
+// -->
+</script>
+</head>
+
+<body>
+
+<form>
+<!-- Start button -->
+<input type = "button" value = "Start" onclick="displayRainbowColours();"> <!-- Step 4: Clear the timer before starting -->
+<!-- ****************************************************************************************************** -->
+<!-- Step 3: Insert a Stop button with an onclick event that clears the timer (refer to pg 151 of textbook) -->
+<!-- ****************************************************************************************************** -->
+<input type="button" value="Stop" onclick="clearTimeout(timer)">
+</form>
+<!-- Paragraph for the colour name -->
+<p id ="colour_name"></p>
+</body>
+
+</html>
