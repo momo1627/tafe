@@ -1,0 +1,11 @@
+In phpMyAdmin
+- select Server: MySQL:3306
+- click [Import] tab
+- browse your computer: [Choose File]
+H:\2018-semester-2\ICT50615-Diploma-Web\Database1\Sample-ClassicModels\Products.sql
+or on your USB
+- click [Go] and wait for a minute or two.
+
+
+
+
