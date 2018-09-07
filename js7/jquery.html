@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>week7</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<div id="main">
+<form id="myform" action="#">
+  <h1>My Details</h1>
+<label for="name">Please enter your name   </label><input type="text" name="name" id="yourname"><br>
+<label for="birth">Please enter your birthyear  </label><input type="text" name="birth" id="yourbirth"><br>
+<label for='books'>What sort of books do you read?</label><br>
+<label>Crime</label><input type="checkbox" name="books" value="Crime">
+<label>Western</label><input type="checkbox" name="books" value="Western">
+<label>Sci-fi</label><input type="checkbox" name="books" value="Sci-fi"><br>
+<label>Fantasy</label><input type="checkbox" name="books" value="Fantasy">
+<label>Non-fiction</label><input type="checkbox" name="books" value="Non-fiction">
+<label>Other</label><input type="checkbox" name="books" value="Other"><br>
+<label for="class">What is your favourite class</label>
+<select name="class" id="classname">
+<option value="select one">select one</option>
+<option value="javascript">javascript</option>
+<option value="html">html</option>
+<option value="design">design</option>
+<option value="lunch break">lunch break</option>
+</select><br>
+<input type="submit" name="submit" id="result" value="Click Here to Submit">
+<input type="reset" name="reset" id="reset" value="Reset">
+
+  </form>
+</div>
+   <div id="box"></div>
+   <script type="text/javascript">
+$('#result').click(function(){
+  var birth = $('#yourbirth');
+  var birthyear = parseInt(birth.val());
+  if ($('#yourname').val() === ''){
+      alert('please tell me your name');
+      $('#yourname').focus();
+      return false;
+    }
+  if (birth.val() === ''){
+     alert('please tell me your birthyear');
+      $('#yourbirth').focus();
+      return false;
+  }
+  if(birthyear < 1900 || birthyear > 2018){
+    alert('please tell me your real birthyear');
+      birth.val('');
+      $('#yourbirth').focus();
+      return false;
+  }
+  $(':checkbox').each(function(){
+    count = 0;
+    if ($(this).attr('checked') != undefined){
+      alert($(this).attr('checked'));
+      count++;
+      alert(count)
+    }
+  })
+  
+  if ($(':checked')){
+    if ($(':checked').length > 2){
+     alert('too many books');
+        return false;
+  } 
+  }
+
+  
+})
+    
+   
+
+   </script>
+
+</body>
+</html>
