@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>week7</title>
+
+<style>
+	
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<form id="myform" action="#" onsubmit="validForm(this)">
+<label for="text1">Enter a password   </label><input type="password" name="text1" id="pass1"><br>
+<label for="text2">confirm your password   </label><input type="password" name="text1" id="pass2"><br>
+<input type="submit" name="" value='result' id="result">
+  </form></div>
+   <div id="box"></div>
+   <script type="text/javascript">
+      function validForm(passform){
+        if(passform.pass1.value === ''){
+          alert('you must enter your password');
+          passform.pass1.focus();
+          return false
+        }
+        if (passform.pass1.value !== passform.pass2.value){
+          alert('two password are not same');
+          passform.pass1.focus();
+          passform.pass1.select();
+          passform.pass1.value = '';
+          passform.pass2.value = '';
+          return false
+        }
+        if (passform.pass1.value.length < 7){
+          alert('password must be at least 7 characters');
+          passform.pass1.focus();
+          passform.pass1.select();
+          passform.pass1.value = '';
+          passform.pass2.value = '';
+          return false
+        }
+        alert('password match - continue!');
+        return true
+      }
+   </script>
+</body>
+</html>

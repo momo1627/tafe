@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>week7</title>
+
+<style>
+	
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<form id="myform" action="#">
+<label for="text1">type first number</label><input type="text" name="text1"><br>
+<label for="text2">type second number</label><input type="text" name="text1"><br>
+<input type="submit" name="" value='result' id="result">
+  </form></div>
+   <div id="box"></div>
+   <script type="text/javascript">
+   	window.onload = function(){
+   		document.getElementById('result').addEventListener('click',function(){
+   			var text1 = parseInt(document.getElementsByTagName('input')[0].value);
+   			var text2 = parseInt(document.getElementsByTagName('input')[1].value);
+   			if (text1 && text2){
+   				if (text1 != NaN && text2 !=NaN) {
+   				alert(text1+text2)
+   				} else{
+   					alert('you must enter number')
+   				}
+
+   			} else{
+   				alert('you must enter number')
+   			}
+
+   		})
+   	}
+   </script>
+</body>
+</html>

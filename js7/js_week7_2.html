@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>week7</title>
+
+<style>
+	
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<form id="myform" action="#" onsubmit="check(this)">
+  <h1>My Details</h1>
+<label for="name">Please enter your name   </label><input type="text" name="name" id="yourname"><br>
+<label for="birth">Please enter your birthyear  </label><input type="text" name="birth" id="birth"><br>
+<label for='books'>What sort of books do you read?</label><br>
+<label>Crime</label><input type="checkbox" name="books" value="Crime">
+<label>Western</label><input type="checkbox" name="books" value="Western">
+<label>Sci-fi</label><input type="checkbox" name="books" value="Sci-fi"><br>
+<label>Fantasy</label><input type="checkbox" name="books" value="Fantasy">
+<label>Non-fiction</label><input type="checkbox" name="books" value="Non-fiction">
+<label>Other</label><input type="checkbox" name="books" value="Other"><br>
+<label for="class">What is your favourite class</label>
+<select name="class" id="classname">
+<option value="select one">select one</option>
+<option value="javascript">javascript</option>
+<option value="html">html</option>
+<option value="design">design</option>
+<option value="lunch break">lunch break</option>
+</select><br>
+<input type="submit" name="submit" id="result" value="Click Here to Submit">
+<input type="reset" name="reset" id="reset" value="Reset">
+
+  </form>
+</div>
+   <div id="box"></div>
+   <script type="text/javascript">
+    function check(){
+      var ourform = document.getElementById('myform');
+      var birthyear = parseInt(ourform.birth.value);
+      var checkbox = ourform.books;
+        var checkValue = [];
+      if(ourform.yourname.value === ''){
+        alert('please tell me your name');
+         ourform.yourname.focus();
+        return false
+      } 
+      if( ourform.birth.value === ''){
+         alert('please enter your birth year');
+        
+         ourform.birth.focus();
+        return false
+      }
+      if( birthyear < 1880 || birthyear > 2018){
+        alert('please enter correct birth year');
+        ourform.birth.value = '';
+        ourform.birth.focus();
+        return false
+      }
+        
+      for (let i = 0; i<checkbox.length;i++) {
+          if (checkbox[i].checked == true) {
+            checkValue.push(checkbox[i])
+          }
+        }
+      if(checkValue.length == 0){
+        alert('please select books');
+        return false;
+      } 
+      if (checkValue.length > 2){
+        alert('too many books');
+        return false;
+      }
+      if (ourform.classname.value == 'select one'){
+        alert('please select your favourite class');
+        ourform.classname.focus();
+        return false;
+      }
+      alert('Thanks for the info,' + ourform.yourname.value + '!')
+
+    }
+    
+window.onload = function(){
+  document.getElementById('result').onclick = check;  
+}
+    
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Checking a Form Element Type</title>
+
+<style>
+	body{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 10px;
+	}
+	form#myform {
+		 background-color: aqua;
+		 color: #000;
+		 border: 1px solid #999;
+		 text-align: center;
+	}
+	input{
+		margin:10px 0;
+	}
+	#myform .select {
+		 width: 150px;
+		}
+
+	#myform .text {
+		 font-size: 11px;
+		 width: 150px;
+	}
+
+	#myform .buttons {
+		 background-color: #333;
+		 color: #fff;
+		 width: 150px;
+	}
+
+	#box {
+		 background-color:lime;
+		 color:#009;
+		 border: 5px solid #333;
+		 text-align: center;
+		 width:200px;
+		 padding: 10px;
+	}
+	#main{
+		width:200px;
+		margin:20px 0;
+	}
+
+	
+</style>
+</head>
+<body>
+
+
+<div id="main">
+<form id="myform" action="#">
+
+	<input name="t1" class="text" value="" onchage="identifyElement(this);"><br>
+	
+	<select class="select" name="s1" onchange="identifyElement(this);">
+	<option value="opt1">Option 1</option>
+	<option value="opt1">Option 2</option>
+	<option value="opt1">Option 3</option>
+	<option value="opt1">Option 4</option>
+    </select><br>
+	
+	<input type="checkbox" name="option1" value="chk" onchange="identifyElement(this);"> Checkbox<br>
+
+	<input value="Click Here" type="button" class="buttons" onclick="identifyElement(this);">
+  </form></div>
+   <div id="box"></div>
+   <script type="text/javascript">
+   	function identifyElement(e){
+   		alert(e.type)
+   	}
+   </script>
+</body>
+</html>
