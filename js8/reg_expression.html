@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<title>Regular Expressions and validation</title>
+<script>
+function validForm(passForm){
+
+	var re=/^\w+$/
+	
+	var re2=/^\d{3,7}$/
+	
+	var re3=/^\w+\s\w+$/
+
+	if(!re.test(passForm.alphan.value)){
+		alert("letters and numbers only");
+		return false;
+	}
+
+
+	if(!re2.test(passForm.digits.value)){
+		alert("between 3 and 7 numbers only");
+		return false;
+	}
+
+	if(!re3.test(passForm.nameBoth.value)){
+		alert("First and last name please");
+		return false;
+	}
+	alert("ok");
+	return true;
+}
+
+</script>
+</head>
+<body>
+<form onsubmit="return validForm(this)" action="#">
+<p>Enter words & numbers:<input type="text" name="alphan">
+<p>Enter numbers only:<input type="text" name="digits">
+<p>Enter first and last name:<input type="text" name="nameBoth">
+
+<p><input type="submit" value="Check it!">
+</form>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>	INSERT THE PAGE TITLE HERE     </title>
+  <meta name="author" content="      ADD YOUR NAME AND YOUR EMAIL ADDRESS HERE     ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+
+</header>
+
+<nav>
+
+</nav>
+<main>
+<h3>Validate a phone number</h3>
+<form id="" onsubmit="submitIt(this)">
+	<label>Enter your phone number (with area code)</label><input type="tel" name="" id="phone"><hr>
+	<label>Enter your tax number </label><input type="tel" name="" id="tax"><hr>
+	<input type="submit" name="" ><input type="reset" name="">
+
+</form>
+<form onsubmit="check(this)">
+	<label>Name: </label><input type="text" name="" id='name'><hr>
+	<label>Email:</label><input type="e-mail" id='e_mail'><hr>
+	<label>Birthdate (dd/mm/yyyy): </label><input type="text" name="" id='date'><hr>
+	<input type="submit" name="">
+</form>
+</main>
+<footer>
+
+</footer>
+</div>
+<script type="text/javascript">
+	reEmail = /^([0-9a-zA-Z\_\.])+\@([a-z0-9])+\.com$/
+	reDate = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/\d\d\d\d$/
+	function check(myForm){
+		validEmail = reEmail.exec(myForm.e_mail.value);
+		validDate = reDate.exec(myForm.date.value);
+		// if(!validEmail){
+		// 	alert('enter correct e_mail address');
+		// 	myForm.e_mail.focus();
+		// 	myForm.e_mail.select();
+		// 	}
+		if(!validDate){
+			alert('enter correct Birthdate');
+			myForm.date.focus();
+			myForm.date.select();
+		}
+		return false
+	}
+	// re = /^\(?(\d{2})\)?[\.\-\/ ]?(\d{4})[\.\-\/ ]?(\d{4})$/
+	// re1 = /^(\d\d\d)\-(\d\d\d)\-(\d\d\d)$/
+	// function submitIt(myForm){
+	// 	validPhone = re.exec(myForm.phone.value);
+	// 	validTax = re1.exec(myForm.tax.value);
+	// 	if (validPhone){
+	// 		myForm.phone.value = "(" + validPhone[1] + ") " + validPhone[2] + "-" + validPhone[3]
+	// 	}
+	// 	else{
+	// 		alert(myForm.phone.value + " isn't a valid phone number")
+	// 		myForm.phone.focus()
+	// 		myForm.phone.select()
+	// 	}
+	// 	if (validTax){
+	// 		myForm.tax.value = "(" + validTax[1] + ") " + validTax[2] + "-" + validTax[3]
+	// 	}
+	// 	else{
+	// 		alert(myForm.tax.value + " isn't a valid tax number")
+	// 		myForm.tax.focus()
+	// 		myForm.tax.select()
+	// 	}
+	// 	return false
+	// }
+	// var string1= 'Fred has 8 dollars and Jim has 15'
+	// alert(regStr = string1.match(/\d+/g))
+	// var string2 = '(304)434-5454';
+	// alert(regStr2 = string2.replace(/[\(\)-]/g,''))                                    
+	// myRegExp = /(\d{2})\W(\d{2})\W(\d{4})/;
+	// dateString = "12/25/2014";
+	// newString = dateString.replace(myRegExp,'$2/$1/$3')
+	// // alert(newString);
+	// var str = "whoever@whevrever.com";
+	// var reg = new RegExp('@');
+	// if (reg.test(str)){
+	// 	alert(str+' is a valid e-mail address')
+	// } else {
+	// 	alert(str+' is not a valid e-mail address')
+	// }
+	// var string3 = "1,2, 3,   4,   5";
+	// alert(regStr3=string3.split(/\s*,\s*/));
+	// var str = '96521234';
+	// var reg = new RegExp('965');
+	// var reg2 = /123/;
+	// var reg3 =/024/;
+	// var index = str.search(reg);
+	// var index2 = str.search(reg2);
+	// var index3 = str.search(reg3);
+	// alert('index = ' + index + '\nindex2 = ' + index2 + '\nindex3 = ' + index3);
+</script>
+</body>
+</html> 

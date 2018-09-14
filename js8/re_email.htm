@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<title>Regular Expressions for email</title>
+<script>
+
+var re = /^\w+([\._-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+		function submitIt(myForm) {
+			if (!re.test(myForm.emailAddr.value)) {
+				alert("Invalid email address");
+				myForm.emailAddr.focus();
+				myForm.emailAddr.select();
+				return false;
+			}
+			
+				alert("Thanks. Enjoy the spam!");
+				return true;
+		}
+</script>
+</head>
+<body>
+<h1>Using regular expressions to validate form</h1>
+
+<form onsubmit="return submitIt(this)" action="#" id="myform">
+
+<p>Email address:<input type="text" name="emailAddr"></p>
+
+<p><input type="submit" value="submit"></p>
+</body>
+</form>
+</html>
