@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>Strings - split method</title>
+	<script>
+	
+	let inputString = 'firstName=Fred,lastName=Jones,state=Tasmania,statement="This is a test, of split"';
+	let arrayTokens = inputString.split(',',3);
+	for (let i=0; i < arrayTokens.length; i++)
+	{
+	   document.write (arrayTokens[i] + "<br>");
+	   let newTokens = arrayTokens[i].split('=');
+	   document.write(newTokens[1] + "<br>");
+	}
+
+	</script>
+	
+</head>
+<body>
+	<div id="container">
+
+	</div>
+</body>
+</html>

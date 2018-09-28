@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<title>Student grade</title>
+<script>
+
+var group = new Array()
+	group[0] = "Jane Doe,22,80,90";
+	group[1] = "John Doe,21,70,65";
+	group[2] = "Jack Smith,30,80,80";
+	group[3] = "Jen Smith,30,90,70";
+	group[4] = "Steven Taylor,26,90,90";
+
+function studentInfo(){
+	let i = prompt("Student No:","");
+	let newGroup = group[i].split(',');
+	let midterm = newGroup[2]*.4;
+	let finMark = newGroup[3]*.6;
+	let grade=midterm + finMark;
+	document.getElementById('result').innerHTML = newGroup[0] + "<br>Midterm grade was " + midterm + "<br>Final exam was " + finMark.toFixed(1) + "<br>" + "Semester grade is<strong> " + grade.toFixed(1) + "</strong>";
+
+}	
+function average(){
+	let total = 0, count = 0;
+	for (let i=0;i<group.length;i++){
+	let allStud = group[i].split(',');
+
+	total = parseInt(allStud[1]) + total;
+	}
+	average = total/group.length;
+	document.getElementById('average').innerHTML=average;
+}
+
+</script>
+</head>
+<body>
+<h1>Grade exercise</h1>
+
+<input type="button" value="final" onclick="studentInfo()">
+<input type="button" value="average" onclick="average()">
+<div id="result"></div>
+<div id="average"></div>
+</body>
+</html>

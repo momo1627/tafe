@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<title>String methods</title>
+</head>
+
+<body>
+ <h1>Simple string methods</h1>
+<script>
+	var Str= prompt("Enter your string",""); // create a string
+	document.write(Str + " has " + Str.length + " characters<br>");
+	
+	document.write(Str + " to lower case " + Str.toLowerCase()  + "<br>");
+	document.write(Str + " to upper case " + Str.toUpperCase()  + "<br>");
+	document.write(Str + " first character is " + Str.charAt(0) + "<br>");
+	
+	if (Str.indexOf('a') > -1) {
+		document.write(Str + " has an 'a' at position " + Str.indexOf("a") + "<br>");
+	}
+	else {
+		document.write(Str + " has an  no 'a' in it.<br>");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*function test(){	 
+	 var newString = ""; 
+      var theString = prompt("Enter your name",""); 
+      var counter = Str.length; 
+
+      for (counter; counter > 0; counter-- ) { 
+         newString += Str.substring(counter-1, counter); 
+      } 
+      document.write(Str + " reversed is " + newString + "!"); 
+	 }
+	 
+function test(){ 
+	var my_str=prompt("Enter your name",""); 
+
+	//var i=my_str.length;
+	//i=i-1;
+
+	for (var i=my_str.length; i>=0; i--)
+	{
+		document.write(my_str.charAt(i));
+
+	}
+}*/
+</script>
+
+<input type="button" value="test this" onclick="test();return false"/>
+</body>
+</html>
+

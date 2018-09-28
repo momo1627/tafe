@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    <title>Miles to Kilometres Conversion</title>
+  <style>
+  table,th,td{border-collapse:collapse;border:2px solid #000;}
+  th,td{padding:5px;}
+  </style>
+  </head>
+  <body>
+  <table>
+  <tr><th>Miles</th><th>Kilometres</th></tr>
+  <script>
+
+function milesToKilo(mile)
+{
+    var kilo = mile*1.609344;
+    return kilo;
+}
+
+//document.write("<table>");
+//document.write("<tr><th>Miles</th><th>Kilometres</th></tr>");
+for (let i = 100; i<=1000; i+=50)
+{
+    // toFixed(2) means print two places after the decimal point
+    //document.write("<tr><td>" + i + " </td><td>" +  (i*1.609).toFixed(2) + "</td></tr>");
+	  document.write("<tr><td>" + i + " </td><td>" +  milesToKilo(i).toFixed(2) + "</td></tr>");
+}
+
+
+//document.write("</table>");
+
+</script>
+</table>
+  </body>
+</html>

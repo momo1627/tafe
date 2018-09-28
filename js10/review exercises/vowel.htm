@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+<title>number of vowels</title>
+
+<script>
+function vowel_count(str) {
+  var m = str.match(/[aeiou]/gi);
+  if(m === null){
+	m = 0;
+  }
+  else{
+	m = m.length;
+	
+  }
+  return m;
+}
+
+//alert(vowel_count("Python"));
+//alert(vowel_count("JavaScript"));
+</script>	
+</head>
+<body>
+<input type="button" value="no. of vowels" onclick="alert(vowel_count(prompt('Enter a word')));">
+
+</body>
+</html>
