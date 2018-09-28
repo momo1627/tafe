@@ -1,0 +1,100 @@
+﻿* {
+margin: 0em;
+padding: 0em;
+font-size: 100%;
+border-style: none;
+list-style-type: none;
+}
+#wrapper{
+    margin: 0 auto;
+    width: 900px;
+    background-image: url('images/main_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header img{
+    vertical-align: bottom
+}
+nav{
+    padding: 0 54px;
+    background-color: #335a80;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li{
+    padding: 6px 0;
+}
+nav ul li a{
+    text-decoration: none;
+    
+    color: #fff;
+}
+nav ul li a:hover,nav ul li .active{
+    color: #d3e500
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 54px;
+}
+main section {
+    color: #fff;
+    margin-right: 50px;
+    font-size: 14px
+
+}
+main section h1{
+    color: #d3e500;
+    font-size: 24px;
+}
+main section h3{
+    font-size: 16px;
+    margin-top: 12px;
+}
+main a{
+    text-decoration: none;
+    color: #fff;
+}
+main a:hover{
+    color: #d3e500;
+    text-decoration: underline;
+}
+main section p{
+    margin-top: 12px;
+    line-height: 1.2;
+}
+main section ul li{
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 2px 0;
+}
+main section table,main section table caption {
+    text-align: left;
+}
+main section table tr td{
+    padding-left: 40px;
+}
+figcaption{
+    line-height: 1.5;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #fff;
+}
+footer ul{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer ul li {
+    padding: 2px 24px;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}

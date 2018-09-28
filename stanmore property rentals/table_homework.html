@@ -1,0 +1,333 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>     INSERT THE PAGE TITLE HERE     </title>
+  
+  <meta name="author" content="      ADD YOUR NAME AND YOUR EMAIL ADDRESS HERE     ">
+
+  <link rel="stylesheet" href="nameOfFile.css">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  #table1{
+    font-family: helvetica,calibri;
+    width: 600px;
+    border-collapse: collapse;
+  }
+  #table1 caption{
+    color: #8c828b;
+    background-color: #d2e3e1;
+  }
+  #table1 th, #table1 td{
+    color: #000;
+    border:1px solid #8ebbb5
+  }
+  #table2{
+    margin-top: 40px;
+    font-family: helvetica,calibri;
+    border-collapse: collapse;
+  }
+  #table2 caption{
+    color: #ea4044;
+  }
+  #table2 th{
+    color: #fff;
+    border:1px solid #ccc;
+    background-color: #000;
+  }
+
+  #table2 td{
+    color: #000;
+    padding: 0 8px;
+    border-collapse: collapse;
+    border:1px solid #ccc
+  }
+  #table2 .subtotal{
+    background-color: #ded;
+  }
+  #table2 .total td{
+    background-color: #ea4044;
+    color: #fff;
+  }
+  #table3{
+    margin-top: 40px;
+    font-family: verdana;
+    border-collapse: collapse;
+  }
+  #table3 caption{
+    color: #658cb1;
+  }
+  #table3 td{
+    padding: 0 16px;
+    text-align: center;
+  }
+  #table3 tr:nth-of-type(1){
+    background-color: #658cb1;
+  }
+  #table3 th{
+    color: #000;
+    border:1px solid #fff;
+    padding: 2px 6px;
+  }
+  #table3 tr:nth-of-type(2),#table3 tr:nth-of-type(4){
+    background-color: #b0c4d7;
+  }
+  #table3 tr td:nth-of-type(1){
+    background-color: #658cb1;
+  }
+  #table3 tr:nth-of-type(3),#table3 tr:nth-of-type(5){
+    background-color: #d7e0ea;
+  }
+  #table3 td{
+    color: #000;
+    border:1px solid #fff
+  }
+  #table4{
+    margin-top: 40px;
+    width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-collapse: collapse;
+  }
+  #table4 caption{
+    border-bottom:2px solid #ab0a28;
+    color: #fff;
+    background-color: #80a057;
+  }
+  
+  #table4 th{
+    border-right:2px solid #ab0a28;
+    
+    color: #000;
+    background-color: #b1df75;
+  }
+  #table4 .border{
+    border-top:2px solid #ab0a28;
+
+  }
+  #table4 td{
+    color: #000;
+    border-collapse: collapse;
+    border:1px solid #ccc
+  }
+  #table5{
+    margin-top: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 300px;
+    border-collapse: collapse;
+  }
+  #table5 caption{
+    color: #400f18;
+    text-align: left;
+  }
+  #table5 tr{
+    border-bottom: 1px solid #000
+  }
+  #table5 th{
+    text-align: left;
+  }
+ 
+  </style>
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+
+<main>
+  <table id="table1">
+    <caption>Table with Column Headers</caption>
+    <tr>
+      <th>table header</th>
+      <th>table header</th>
+      <th>table header</th>
+    </tr>
+    <tr>
+      <td rowspan="3">table data</td>
+      <td>table data</td>
+      <td>table data</td>
+    </tr>
+    <tr>
+      <td colspan="2">table data</td>
+    </tr>
+    <tr>
+      <td>table data</td>
+      <td>table data</td>
+    </tr>
+    <tr>
+        <td colspan="3">table data</td>
+      </tr>
+  </table>
+  <table id="table2">
+      <caption>Travel Expenses</caption>
+      <tr>
+        <th>Location</th>
+        <th>Meals</th>
+        <th>Hotels</th>
+        <th>Fares</th>
+        <th>Totals</th>
+      </tr>
+      <tr>
+        <td colspan="5">Queenscliff</td>
+      </tr>
+      <tr>
+          <td>Day 1</td>
+          <td>37.74</td>
+          <td>112.00</td>
+          <td>45.00</td>
+          <td>194.74</td>
+        </tr>
+        <tr>
+          <td>Day 2</td>
+          <td>27.28</td>
+          <td>112.00</td>
+          <td>45.00</td>
+          <td>184.28</td>
+        </tr>
+        <tr class="subtotal">
+          <td>Subtotals</td>
+          <td>65.02</td>
+          <td>224.00</td>
+          <td>90.00</td>
+          <td>379.02</td>
+        </tr>
+        <tr>
+          <td colspan="5">Sorrento</td>
+        </tr>
+        <tr>
+            <td>Day 3</td>
+            <td>96.25</td>
+            <td>109.00</td>
+            <td>36.00</td>
+            <td>214.25</td>
+          </tr>
+          <tr>
+            <td>Day 4</td>
+            <td>35.00</td>
+            <td>109.00</td>
+            <td>36.00</td>
+            <td>180.00</td>
+          </tr>
+          <tr class="subtotal">
+            <td>Subtotals</td>
+            <td>131.25</td>
+            <td>218.00</td>
+            <td>72.00</td>
+            <td>421.25</td>
+          </tr>
+          <tr class="total">
+            <td>Totals</td>
+            <td>196.27</td>
+            <td>442.00</td>
+            <td>162.00</td>
+            <td>800.27</td>
+          </tr>
+        
+    </table>
+    <table id="table3">
+        <caption>Trade Wholesale Prices</caption>
+        <tr>
+          <th>Item</th>
+          <th>Threaded screws</th>
+          <th>Flat nails</th>
+          <th>Dyna-bolts</th>
+          <th>Spring washers</th>
+        </tr>
+        <tr>
+            <td>1kg</td>
+            <td>$2.50</td>
+            <td>$3.50</td>
+            <td>$4.50</td>
+            <td>$2.50</td>
+          </tr>
+          <tr>
+            <td>2kg</td>
+            <td>$3.00</td>
+            <td>$4.00</td>
+            <td>$5.00</td>
+            <td>$3.00</td>
+          </tr>
+          <tr>
+            <td>3kg</td>
+            <td>$3.50</td>
+            <td rowspan="2">$4.50</td>
+            <td>$5.50</td>
+            <td rowspan="2">$3.50</td>
+          </tr>
+          <tr>
+            <td>4kg</td>
+            <td>$4.00</td>
+            <td>$6.00</td>
+          </tr>
+    
+   
+      </table>
+      <table id="table4">
+          <caption>Sports Camps</caption>
+          <tr>
+            <th rowspan="3">Narrabeen</th>
+            <td>Facilities:Cabins and Tents</td>
+          </tr>
+          <tr>
+            <td>Capacity:120</td>
+          </tr>
+          <tr>
+            <td>lever:4</td>
+          </tr>
+          <tr >
+              <th rowspan="3">Waterfall</th>
+              <td class="border">Facilities:Cabins </td>
+            </tr>
+            <tr>
+              <td>Capacity:90</td>
+            </tr>
+            <tr>
+              <td>lever:2</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Emu Plains</th>
+                <td class="border">Facilities:Cabins,Tents and Dormitory</td>
+              </tr>
+              <tr>
+                <td>Capacity:500</td>
+              </tr>
+              <tr>
+                <td>lever:3</td>
+              </tr>
+        </table>
+        <table id="table5">
+            <caption>Prices</caption>
+            <tr>
+              <th>Room Type</th>
+              <th>Mon-Thur</th>
+              <th>Fri-Sun</th>
+            </tr>
+              <tr>
+                  <td>RainForest Studio</td>
+                  <td>$120 pn</td>
+                  <td>$160 pn</td>
+                </tr>
+                <tr>
+                    <td>Beach Room</td>
+                    <td>$140 pn</td>
+                    <td>$180 pn</td>
+                  </tr>
+              
+          </table>
+</main>
+
+
+
+
+
+</div>
+  
+</body>
+</html> 
